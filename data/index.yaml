@@ -1,0 +1,56 @@
+articles:
+  - series: function_composition_at_scale
+    title: Function Composition
+    part: 1
+    id: function_composition_at_scale__function_composition_at_scale
+    summary: dogs
+  - series: function_composition_at_scale
+    title: Function Composition
+    part: 2
+    id: function_composition_at_scale__function_composition
+    summary: dogs
+  - series: function_composition_at_scale
+    title: Decoupling Functions
+    part: 3
+    id: function_composition_at_scale__decoupling_functions
+    summary: dogs
+  - series: function_composition_at_scale
+    title: Logs
+    part: 4
+    id: function_composition_at_scale__logs
+    summary: dogs
+  - series: function_composition_at_scale
+    title: Immutability
+    part: 5
+    id: function_composition_at_scale__immutability
+    summary: dogs
+  - series: function_composition_at_scale
+    title: Build Your Own Database
+    part: 6
+    id: function_composition_at_scale__databases
+    summary: dogs
+  - series: function_composition_at_scale
+    title: Data Engineering
+    part: 7
+    id: function_composition_at_scale__data_eng
+    summary: dogs
+  - series: function_composition_at_scale
+    title: Source Code is a Product
+    part: 1
+    id: source_code_as_a_product__intro
+    summary: dogs
+  - series: source_code_as_a_product
+    title: Solutions
+    part: 2
+    id: source_code_as_a_product__solutions
+    summary: dogs
+  - series: source_code_as_a_product
+    title: Experiment
+    part: 3
+    id: source_code_as_a_product__experiment
+    summary: dogs
+series:
+  - id: function_composition_at_scale
+    title: Function Composition at Scale
+  - id: source_code_as_a_product
+    title: Source Code as a Product

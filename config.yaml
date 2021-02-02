@@ -1,0 +1,3 @@
+port: 8080
+data_dir: data/
+icons_dir: icons/

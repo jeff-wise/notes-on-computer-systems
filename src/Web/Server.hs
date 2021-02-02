@@ -1,8 +1,45 @@
+--
+-- WEB / Server
+--
 
-module Web.Server where
+{-# OPTIONS_GHC -F -pgmF=record-dot-preprocessor #-}
+
+module Web.Server (
+    runServer
+  ) where
 
 
-runServer :: IO ()
-runServer = run 80 app1
+import Network.Wai (Application)
+import Network.Wai.Handler.Warp (run)
+import Servant 
+  ( Server
+  , serve
+  , Proxy (..)
+  , (:<|>)(..)
+  , serveDirectoryWebApp
+  )
 
+import Data.Assets (Assets)
+import Config (Config)
+import Web.API (API)
+import qualified Web.Handler as Handler (pageIndex)
+
+
+
+api :: Proxy API
+api = Proxy
+
+
+server :: Config -> Assets -> Server API
+server _ assets = Handler.pageIndex assets
+      :<|> serveDirectoryWebApp "dist-web/"
+
+
+app :: Config -> Assets -> Application
+app config assets = serve api $ server config assets
+
+
+runServer :: Config -> Assets -> IO ()
+runServer config assets = do
+  run config.port $ app config assets
 
